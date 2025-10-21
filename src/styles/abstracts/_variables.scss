@@ -1,0 +1,32 @@
+@use "sass:color";
+
+// Primary & Secondary Colors
+$primary-color: #1E3A8A;    
+$secondary-color: #4f518c;  
+
+// Backgrounds
+$bg-light: #F9FAFB;          
+$bg-white: #F9FAFB;           
+$bg-hover: #F3F4F6;          
+
+// Text Colors
+$text-primary: #111827;       
+$text-secondary: #6B7280;    
+$text-white: #ffffff;     
+$text-error: #dc2626;
+
+// Borders
+$border-color: #e9ecef;      
+
+// ------------------------------------------------------------------------------------------------------
+// Button Colors
+
+// Primary Button
+$btn-primary-bg: $primary-color;
+$btn-primary-text: #FFFFFF;
+$btn-primary-hover-bg: color.adjust($primary-color, $lightness: 10%);
+
+// Secondary Button
+$btn-secondary-bg: $secondary-color;
+$btn-secondary-text: #FFFFFF;
+$btn-secondary-hover-bg: color.adjust($secondary-color, $lightness: 10%);

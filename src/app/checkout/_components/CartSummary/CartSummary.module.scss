@@ -1,0 +1,121 @@
+.cartSummary {
+  h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: $primary-color;
+  }
+}
+
+.cartTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+
+  th,
+  td {
+    padding: 12px 15px;
+    font-size: 0.8rem;
+  }
+
+  th {
+    color: $text-primary;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+
+  tr {
+    border-bottom: 1px solid $border-color;
+    transition: background 0.2s;
+  }
+
+  .productCell {
+    @include flex-center(10px);
+    justify-content: unset;
+    white-space: normal;
+
+    .productImage {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    span {
+      color: $text-primary;
+      font-weight: 500;
+    }
+
+    .productName {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .productDesc {
+      color: $text-secondary;
+    }
+  }
+  .price {
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+  .quantityControl {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+
+    button {
+      border: 1px solid $border-color;
+      padding: 0.5rem 0.8rem;
+      border-radius: unset;
+      height: 100%;
+      font-size: 1.2rem;
+    }
+
+    button.increaseQuantity {
+      border-right: 0;
+    }
+
+    button.decreaseQuantity {
+      border-left: 0;
+    }
+
+    .quantity {
+      font-size: 1rem;
+      height: 100%;
+      padding: unset;
+      width: 2.5rem;
+      text-align: center;
+    }
+  }
+
+  .removeBtn {
+    font-size: 1.5rem;
+    color: $text-secondary;
+  }
+
+  @media (max-width: 768px) {
+    tr {
+      display: flex !important;
+      justify-content: center;
+      column-gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .productName {
+      font-size: 0.8rem !important;
+    }
+    .productDesc {
+      font-size: 0.7rem !important;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .productCell {
+      .productImage {
+        height: 70px;
+        width: 70px;
+      }
+    }
+  }
+}

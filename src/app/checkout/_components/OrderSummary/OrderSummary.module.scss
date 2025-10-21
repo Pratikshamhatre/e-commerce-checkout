@@ -1,0 +1,51 @@
+.orderSummary {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: $secondary-color;
+    border-bottom: 1px solid $border-color;
+    padding: 0.65rem 0;
+  }
+
+  .summaryRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    color: $secondary-color;
+  }
+
+  hr {
+    @include horizontal-line(1rem 0, $border-color);
+  }
+
+  .total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  .checkoutBtn {
+    margin-top: 1.5rem;
+    width: 100%;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 768px) {
+  
+    .checkoutBtn,.summaryRow,.total {
+      font-size: 0.9rem;
+    }
+    h2{
+      font-size: 1rem;
+    }
+  }
+}

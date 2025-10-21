@@ -1,0 +1,42 @@
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+}
+
+.label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid $border-color;
+  outline: none;
+  font-size: 1rem;
+  color: #111827;
+  background: $text-white;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+
+  &::placeholder {
+    color: #9ca3af;
+  }
+}
+
+.icon {
+  position: absolute;
+  left: 0.8rem;
+  color: #6b7280;
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+

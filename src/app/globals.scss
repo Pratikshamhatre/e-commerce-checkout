@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.d-block {
+  display: block;
+}
+
+//error msg class
+.error {
+  color: $text-error;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.errorText {
+  color: $text-error;
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}
+
+
+/* Global container class */
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+
+  @media (max-width: 1024px) {
+    max-width: 960px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  @media (max-width: 480px) {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}

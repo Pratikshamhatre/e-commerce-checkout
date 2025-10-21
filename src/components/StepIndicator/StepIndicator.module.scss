@@ -1,0 +1,22 @@
+.stepIndicators {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+
+  .step {
+    flex: 1;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 2px solid $border-color;
+    font-weight: 600;
+
+    &.active {
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+    }
+  }
+}

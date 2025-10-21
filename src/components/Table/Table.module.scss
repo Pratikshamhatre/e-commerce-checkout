@@ -1,0 +1,67 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; 
+
+  th,
+  td {
+    padding: 12px 15px;
+    font-size: 0.8rem;
+    vertical-align: middle;
+  }
+
+  th {
+    color: $secondary-color;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+  }
+
+  .left {
+    text-align: left;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .right {
+    text-align: right;
+  }
+
+  tr {
+    border-bottom: 1px solid $border-color;
+    transition: background 0.2s;
+
+ 
+  }
+
+  /* Generic responsive styles */
+  @media (max-width: 768px) {
+    display: block;
+
+    thead {
+      display: none;
+    }
+
+    tr {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    td {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border: none;
+
+      &:before {
+        content: attr(data-label);
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $text-primary;
+      }
+    }
+  }
+}

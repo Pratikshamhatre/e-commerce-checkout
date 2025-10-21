@@ -1,0 +1,51 @@
+.emptyPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+  text-align: center;
+  min-height: 60vh;
+  margin: auto;
+
+  .image {
+    width: 180px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: $primary-color;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    max-width: 400px;
+  }
+
+  .button {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .emptyPlaceholder {
+    padding: 2rem 1rem;
+
+    .image {
+      width: 140px;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}

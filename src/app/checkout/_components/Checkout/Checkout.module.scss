@@ -1,0 +1,38 @@
+.checkoutContainer {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 4rem;
+  align-items: start;
+  margin: auto;
+  min-height: 70vh;
+
+  .cart-summary,
+  .order-summary,
+  .payment-form {
+    width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr; // Stack on smaller screens
+  }
+
+  @media (max-width: 900px) {
+    .cart-summary,
+    .order-summary,
+    .payment-form {
+      flex: 1 1 100%;
+    }
+  }
+}
+
+.navigationButtons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+
+  &.justifyEnd {
+    justify-content: flex-end;
+  }
+}
+
