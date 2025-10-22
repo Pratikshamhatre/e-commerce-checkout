@@ -20,10 +20,9 @@ interface InputProps {
   maxLength?: number;
   register?: ReturnType<any>; // React Hook Form register function
   onBlur?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  id?:string
-
+  id?: string;
 }
- function Input({
+function Input({
   label,
   type = "text",
   name,
@@ -39,10 +38,13 @@ interface InputProps {
   wrapperClassName = "",
   maxLength,
   register,
-  onBlur,id
+  onBlur,
+  id,
 }: InputProps) {
+  const inputId = id || name;
+
   const inputProps = {
-    id: id ? id :name,
+    id: inputId,
     name,
     type,
     placeholder,
@@ -59,7 +61,12 @@ interface InputProps {
   const inputElement = register ? (
     <input {...inputProps} {...register(name)} />
   ) : (
-    <input {...inputProps} value={value ?? ""} onChange={onChange} onBlur={onBlur}/>
+    <input
+      {...inputProps}
+      value={value ?? ""}
+      onChange={onChange}
+      onBlur={onBlur}
+    />
   );
 
   const inputWithIcon = icon ? (
@@ -76,7 +83,7 @@ interface InputProps {
   return (
     <div className={`${styles.inputGroup} ${wrapperClassName}`}>
       {label && (
-        <label htmlFor={name} className={styles.label}>
+        <label htmlFor={inputId} className={styles.label}>
           {label}
           {required && <span className={styles.required}>*</span>}
         </label>
@@ -87,5 +94,4 @@ interface InputProps {
   );
 }
 
-
-export default React.memo(Input)
+export default React.memo(Input);

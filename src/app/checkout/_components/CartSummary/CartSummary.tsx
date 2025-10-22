@@ -25,6 +25,7 @@ function CartSummary({
             className={styles.productImage}
             width={80}
             height={80}
+            priority
 
           />
           <div>

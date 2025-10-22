@@ -39,66 +39,6 @@
       transition: all 0.3s ease;
     }
   }
-
-  .nav {
-    display: flex;
-    gap: 1.5rem;
-
-    a {
-      color: #333;
-      font-weight: 500;
-      text-decoration: none;
-      position: relative;
-      transition: all 0.3s ease;
-
-      &:hover {
-        color: $primary-color;
-
-        &::after {
-          width: 100%;
-        }
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -4px;
-        left: 0;
-        background-color: $primary-color;
-        transition: width 0.3s ease;
-      }
-    }
-  }
-
-  .cart {
-    position: relative;
-    cursor: pointer;
-
-    .cartIcon {
-      width: 24px;
-      height: 24px;
-      stroke: $primary-color;
-      transition: transform 0.2s ease;
-
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-
-    .cartCount {
-      position: absolute;
-      top: -8px;
-      right: -8px;
-      background-color: $primary-color;
-      color: $text-white;
-      font-size: 0.75rem;
-      font-weight: 700;
-      border-radius: 50%;
-      padding: 0.2rem 0.5rem;
-    }
-  }
 }
 
 /* Responsive */
@@ -109,35 +49,8 @@
       padding: 0.5rem 1rem;
     }
 
-    .logo{
+    .logo {
       font-size: 1rem;
-    }
-
-    .hamburger {
-      display: flex;
-    }
-
-    .nav {
-      flex-direction: column;
-      position: absolute;
-      top: 70px;
-      left: 0;
-      right: 0;
-      background: $bg-white;
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.3s ease;
-      gap: 1rem;
-      padding: 0;
-
-      a {
-        padding: 0.75rem 1rem;
-      }
-
-      &.navOpen {
-        max-height: 300px; /* enough for links */
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      }
     }
   }
 }
